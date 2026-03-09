@@ -1,0 +1,31 @@
+# Environment variables — NEVER commit this
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+*.egg-info/
+
+# Django
+db.sqlite3
+media/
+
+# React / Node
+node_modules/
+dist/
+build/
+.env.local
+
+# Vite
+.vite/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
