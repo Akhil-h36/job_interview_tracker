@@ -1,7 +1,7 @@
 const BASE_URL = "http://localhost:8000/api"; // adjust to your Django URL
 
 export const getAllRecords = async () => {
-  const res = await fetch(`${BASE_URL}/records/`);
+  const res = await fetch(`${BASE_URL}/application/`);
   return res.json();
 };
 
@@ -20,7 +20,7 @@ export const applyJob = async (platform) => {
 };
 
 
-// Deletes ALL application records from the database
+
 export const resetAll = async () => {
   const res = await fetch(`${BASE_URL}/reset/`, {
     method: "DELETE",

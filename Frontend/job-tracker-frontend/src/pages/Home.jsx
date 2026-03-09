@@ -55,6 +55,9 @@ export default function Home() {
 
   useEffect(() => {
     fetchStats();
+    // Poll every 5s so widget changes reflect on main page without manual refresh
+    const interval = setInterval(fetchStats, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   return (

@@ -69,7 +69,7 @@ export default function ApplyButtons({ refreshStats }) {
     await refreshStats();
     setLoading(l => ({ ...l, [`${platform}_set`]: false }));
     setManualCounts(c => ({ ...c, [platform]: "" }));
-    showFeedback(platform, `Set to ${val} ✓`);
+    showFeedback(platform, `+${val} added ✓`);
   };
 
   return (
@@ -134,7 +134,7 @@ export default function ApplyButtons({ refreshStats }) {
                 onClick={() => handleSetCount(p.key)}
                 disabled={loading[`${p.key}_set`]}
               >
-                SET
+                ADD
               </button>
             </div>
           </div>
